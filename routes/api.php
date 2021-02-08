@@ -35,3 +35,9 @@ Route::get('/employees/{id}',   'App\Http\Controllers\Api\EmployeesController@ge
 Route::post('/employees',       'App\Http\Controllers\Api\EmployeesController@createEmployee');
 Route::put('/employees/{id}',   'App\Http\Controllers\Api\EmployeesController@updateEmployee');
 Route::delete('/employees/{id}','App\Http\Controllers\Api\EmployeesController@deleteEmployee');
+/** Job History Routes */
+Route::get('/job-history',        'App\Http\Controllers\Api\JobHistoryController@getAllJobHistory');
+Route::get('/job-history/{id}',   'App\Http\Controllers\Api\JobHistoryController@getJobHistory');
+Route::post('/job-history',       'App\Http\Controllers\Api\JobHistoryController@createJobHistory');
+Route::put('/job-history/{id}',   'App\Http\Controllers\Api\JobHistoryController@updateJobHistory');
+Route::delete('/job-history/{id}','App\Http\Controllers\Api\JobHistoryController@deleteJobHistory');

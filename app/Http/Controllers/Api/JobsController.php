@@ -37,7 +37,6 @@ class JobsController extends Controller
   }
 
   public function updateJob(Request $request, $id) {
-    // return response()->json(["job_title"=>"$request->job_title"],200);die;
     if (Jobs::where('job_id', $id)->exists()) {
       $job = Jobs::find($id);
 

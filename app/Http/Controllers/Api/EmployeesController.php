@@ -44,7 +44,6 @@ class EmployeesController extends Controller
   }
 
   public function updateEmployee(Request $request, $id) {
-    // return response()->json(["first_name"=>"$request->first_name"],200);die;
     if (Employees::where('employee_id', $id)->exists()) {
       $employee = Employees::find($id);
 
