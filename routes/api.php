@@ -17,15 +17,21 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-/* Departments Routes */
+/** Departments Routes */
 Route::get('/departments', 'App\Http\Controllers\Api\DepartmentsController@getAllDepartments');
 Route::get('/departments/{id}', 'App\Http\Controllers\Api\DepartmentsController@getDepartment');
 Route::post('/departments', 'App\Http\Controllers\Api\DepartmentsController@createDepartment');
 Route::put('/departments/{id}', 'App\Http\Controllers\Api\DepartmentsController@updateDepartment');
 Route::delete('/departments/{id}','App\Http\Controllers\Api\DepartmentsController@deleteDepartment');
-/* Jobs Routes */
+/** Jobs Routes */
 Route::get('/jobs',        'App\Http\Controllers\Api\JobsController@getAllJobs');
 Route::get('/jobs/{id}',   'App\Http\Controllers\Api\JobsController@getJob');
 Route::post('/jobs',       'App\Http\Controllers\Api\JobsController@createJob');
 Route::put('/jobs/{id}',   'App\Http\Controllers\Api\JobsController@updateJob');
 Route::delete('/jobs/{id}','App\Http\Controllers\Api\JobsController@deleteJob');
+/** Employees Routes */
+Route::get('/employees',        'App\Http\Controllers\Api\EmployeesController@getAllEmployees');
+Route::get('/employees/{id}',   'App\Http\Controllers\Api\EmployeesController@getEmployee');
+Route::post('/employees',       'App\Http\Controllers\Api\EmployeesController@createEmployee');
+Route::put('/employees/{id}',   'App\Http\Controllers\Api\EmployeesController@updateEmployee');
+Route::delete('/employees/{id}','App\Http\Controllers\Api\EmployeesController@deleteEmployee');
